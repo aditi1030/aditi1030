@@ -12,6 +12,19 @@
   'use strict';
 
   /* ----------------------------------------------------------
+     OWNER CONFIG — edit here to update name everywhere
+  ---------------------------------------------------------- */
+  const OWNER = {
+    name:     'Aditi Panwar',
+    initials: 'AP',
+    role:     'Business Analyst',
+    org:      'Alu-Fix Facades Ltd',
+    location: 'Belfast, Northern Ireland, United Kingdom',
+    emailUserCodes:   [97, 100, 105, 105, 116, 49, 48, 46, 110, 105, 116, 106],
+    emailDomainCodes: [103, 109, 97, 105, 108, 46, 99, 111, 109],
+  };
+
+  /* ----------------------------------------------------------
      Utility: query helpers
   ---------------------------------------------------------- */
   const qs  = (sel, root = document) => root.querySelector(sel);
@@ -25,6 +38,47 @@
   const navLinks  = qs('#nav-links');
   const navItems  = qsa('.nav-links a');
   const yearEl    = qs('#year');
+
+  /* ----------------------------------------------------------
+     Populate data-var placeholders from OWNER config
+  ---------------------------------------------------------- */
+  function fillOwnerVars() {
+    document.querySelectorAll('[data-var]').forEach(el => {
+      const key = el.getAttribute('data-var');
+      if (OWNER[key] !== undefined) el.textContent = OWNER[key];
+    });
+    document.title = OWNER.name + ' \u2014 ' + OWNER.role;
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) metaDesc.content = 'Personal portfolio of ' + OWNER.name + ', ' + OWNER.role + ' at ' + OWNER.org + '.';
+
+    // Build email link at runtime so the address is not exposed in raw HTML.
+    const decodeCodes = codes => codes.map(code => String.fromCharCode(code)).join('');
+    const email = decodeCodes(OWNER.emailUserCodes) + '@' + decodeCodes(OWNER.emailDomainCodes);
+    document.querySelectorAll('[data-email-link]').forEach(link => {
+      link.setAttribute('href', 'mailto:' + email);
+      link.setAttribute('aria-label', 'Send email to ' + OWNER.name);
+    });
+
+    // Deter easy scraping/downloading on protected media.
+    const protectedNodes = document.querySelectorAll('[data-protected-media], [data-protected-media] img');
+    protectedNodes.forEach(node => {
+      node.addEventListener('contextmenu', e => e.preventDefault());
+      node.addEventListener('dragstart', e => e.preventDefault());
+      node.addEventListener('copy', e => e.preventDefault());
+      node.addEventListener('cut', e => e.preventDefault());
+      node.addEventListener('selectstart', e => e.preventDefault());
+      node.addEventListener('mousedown', e => {
+        if (e.button === 2) e.preventDefault();
+      });
+    });
+  }
+
+  // Run immediately if DOM is ready, otherwise wait for it
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', fillOwnerVars);
+  } else {
+    fillOwnerVars();
+  }
 
   /* ----------------------------------------------------------
      Footer: current year

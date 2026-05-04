@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Disclaimer — Aditi Panwar</title>
+  <meta name="description" content="AI usage disclaimer for Aditi Panwar's personal portfolio website." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:           #09090f;
+      --bg-card:      #111120;
+      --bg-raised:    #181830;
+      --accent:       #6366f1;
+      --accent-light: #a5b4fc;
+      --accent-dim:   rgba(99,102,241,0.12);
+      --accent-border:rgba(99,102,241,0.30);
+      --text-primary: #f1f1f8;
+      --text-secondary:#9090b0;
+      --text-muted:   #52527a;
+      --border:       rgba(255,255,255,0.06);
+      --radius:       14px;
+      --ease:         cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text-primary);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Back link bar */
+    .topbar {
+      padding: 1.25rem 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 0.25s var(--ease);
+    }
+    .back-link:hover { color: var(--accent-light); }
+    .back-link svg { transition: transform 0.25s var(--ease); }
+    .back-link:hover svg { transform: translateX(-3px); }
+
+    /* Main content */
+    main {
+      flex: 1;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 4rem 2rem 5rem;
+      width: 100%;
+    }
+
+    /* Badge */
+    .ai-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.35rem 0.9rem;
+      border-radius: 99px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: var(--accent-dim);
+      color: var(--accent-light);
+      border: 1px solid var(--accent-border);
+      margin-bottom: 1.5rem;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      line-height: 1.1;
+      margin-bottom: 0.6rem;
+      background: linear-gradient(140deg, #fff 40%, var(--accent-light) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+      color: var(--text-muted);
+      margin-bottom: 3rem;
+    }
+
+    /* Cards */
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      margin-bottom: 1.25rem;
+      transition: border-color 0.3s var(--ease);
+    }
+    .card:hover { border-color: var(--accent-border); }
+
+    .card-icon {
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .card h2 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      letter-spacing: -0.01em;
+      margin-bottom: 0.6rem;
+    }
+
+    .card p {
+      font-size: 0.9375rem;
+      color: var(--text-secondary);
+      line-height: 1.75;
+    }
+
+    /* Summary box */
+    .summary {
+      background: var(--accent-dim);
+      border: 1px solid var(--accent-border);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      margin-top: 2rem;
+      margin-bottom: 1.5rem;
+      font-size: 0.9375rem;
+      color: var(--accent-light);
+      line-height: 1.7;
+    }
+    .summary strong { color: var(--text-primary); }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1.5rem 2rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+    }
+    footer a {
+      color: var(--accent-light);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 480px) {
+      main { padding: 2.5rem 1.25rem 4rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <a href="index.html" class="back-link" aria-label="Back to portfolio">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <polyline points="15 18 9 12 15 6"/>
+      </svg>
+      Back to Portfolio
+    </a>
+  </div>
+
+  <main>
+    <div class="ai-badge">
+      ✦ A note on AI
+    </div>
+
+    <h1>Yes, I Used AI.<br/>Here's the truth.</h1>
+    <p class="subtitle">Last updated · May 2026</p>
+
+    <div class="summary">
+      <strong>TL;DR:</strong> Everything you read here is real, just polished with a little help from the machines. 🤝
+    </div>
+
+    <div class="card">
+      <div class="card-icon">🤖</div>
+      <h2>The website? AI built it.</h2>
+      <p>
+        I'm not going to pretend I hand-coded every pixel at 2am with a cup of tea and sheer determination.
+        This portfolio was built with the help of an LLM. I gave it direction, taste, and my actual information.
+        It gave me clean HTML, CSS, and JavaScript. Honestly, a solid deal.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">💡</div>
+      <h2>Why tell you this?</h2>
+      <p>
+        Because honesty is a better look than pretending.
+        AI is a tool, like Excel, or Google, or asking a clever friend for help.
+        I used it well, I checked its work, and I stand behind every word on this site.
+        That feels worth saying out loud.
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <p>
+      <a href="index.html">← Return to Portfolio</a>
+      &nbsp;·&nbsp;
+      Aditi Panwar · <span id="year"></span>
+    </p>
+  </footer>
+
+  <script>
+    const y = document.getElementById('year');
+    if (y) y.textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>

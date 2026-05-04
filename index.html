@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>[Your Name] — Engineer</title>
-  <meta name="description" content="Personal portfolio of [Your Name], a software engineer." />
+  <title>Aditi Panwar — Engineer</title>
+  <meta name="description" content="Personal portfolio of Aditi Panwar, a software engineer." />
 
-  <!-- Fonts: Inter (body) + space for weight variation -->
+  <!-- Fonts: DM Sans (body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -20,11 +20,12 @@
   ============================================================ -->
   <nav id="navbar" aria-label="Primary navigation">
     <div class="nav-container">
-      <a href="#home" class="nav-logo" aria-label="Home">[YN]</a>
+      <a href="#home" class="nav-logo" aria-label="Home"><span data-var="initials"></span></a>
 
       <ul class="nav-links" id="nav-links" role="list">
         <li><a href="#about">About</a></li>
         <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -47,11 +48,8 @@
 
     <div class="hero-content">
       <p class="hero-greeting">Hello, I'm</p>
-      <h1 class="hero-name">[Your Name]</h1>
-      <h2 class="hero-title">[Your Title · e.g. Software Engineer]</h2>
-      <p class="hero-tagline">
-        [A short, compelling tagline about what you build and what drives you as an engineer.]
-      </p>
+      <h2 class="hero-name"><span data-var="name"></span></h2>
+      <h3 class="hero-title"><span data-var="role"></span> · <span data-var="org"></span></h3>
       <div class="hero-actions">
         <a href="#experience" class="btn btn-primary">View My Work</a>
         <a href="#contact" class="btn btn-outline">Get In Touch</a>
@@ -80,7 +78,16 @@
         <div class="about-avatar reveal">
           <div class="avatar-ring">
             <div class="avatar-inner">
-              <span class="avatar-initials">[YN]</span>
+              <div class="avatar-photo-wrap" data-protected-media>
+                <img
+                  src="public/aditi_photo.png"
+                  alt="Portrait of Aditi Panwar"
+                  class="avatar-photo"
+                  loading="lazy"
+                  draggable="false"
+                  oncontextmenu="return false"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -88,24 +95,24 @@
         <!-- Text -->
         <div class="about-text reveal">
           <p>
-            [Introduce yourself here — your background, where you studied or started, and the kind of engineering that excites you most. Keep it genuine and concise.]
+            I’m Aditi Panwar, a data analyst and business intelligence professional with a strong foundation in analytics, machine learning, and data-driven decision-making. With a Master’s in Business Analytics from Queen’s University Belfast, I bring hands-on experience across industries ranging from banking to healthcare and product data management.
           </p>
           <p>
-            [Describe your approach to work — how you think about problem-solving, collaboration, or craftsmanship. Add anything that makes you distinctly you as an engineer.]
+            I specialize in transforming complex datasets into actionable insights using tools like Python, SQL, Power BI, and Tableau. In my current and previous roles, I’ve built automated data workflows, developed impactful dashboards, and collaborated closely with stakeholders to solve real business problems, from optimizing costs to improving customer engagement. I’m particularly passionate about leveraging data to tell meaningful stories and drive strategic decisions that create measurable impact.
           </p>
 
           <dl class="about-details">
             <div class="detail-row">
               <dt>Location</dt>
-              <dd>[City, Country]</dd>
+              <dd><span data-var="location"></span></dd>
             </div>
             <div class="detail-row">
-              <dt>Focus</dt>
-              <dd>[e.g. Full-Stack / Systems / ML Engineering]</dd>
+              <dt>Role</dt>
+              <dd><span data-var="role"></span></dd>
             </div>
             <div class="detail-row">
-              <dt>Status</dt>
-              <dd>[Open to opportunities · Available Jan 2025]</dd>
+              <dt>Organisation</dt>
+              <dd><span data-var="org"></span></dd>
             </div>
           </dl>
         </div>
@@ -125,72 +132,141 @@
 
       <ol class="timeline" role="list">
 
-        <!-- Job 1 -->
+        <!-- Job 1 — Alu-Fix Facades -->
         <li class="timeline-item">
           <div class="timeline-dot" aria-hidden="true"></div>
           <article class="timeline-card">
             <div class="timeline-meta">
-              <div>
-                <h3 class="timeline-role">[Senior / Lead Role Title]</h3>
-                <span class="timeline-company">@ [Company Name A]</span>
+              <div class="timeline-company-row">
+                <img
+                  src="public/alu_fix_uk_ltd_logo.jpeg"
+                  alt="Alu-Fix Facades Ltd logo"
+                  class="timeline-logo"
+                  loading="lazy"
+                />
+                <div>
+                  <h3 class="timeline-role">Business Analyst</h3>
+                  <span class="timeline-company">@ Alu-Fix Facades Ltd · Full-time</span>
+                </div>
               </div>
-              <time class="timeline-period">[Mon YYYY] — Present</time>
+              <time class="timeline-period">Aug 2025 — Present</time>
             </div>
-            <ul class="timeline-bullets" role="list">
-              <li>[Key achievement or responsibility — quantify impact where possible, e.g. reduced latency by X%.]</li>
-              <li>[Another key achievement — describe what you architected, built, or improved.]</li>
-              <li>[Cross-functional or leadership contribution.]</li>
-            </ul>
             <div class="tag-row">
-              <span class="tag">[Tech A]</span>
-              <span class="tag">[Tech B]</span>
-              <span class="tag">[Tech C]</span>
+              <span class="tag">Power BI</span>
+              <span class="tag">Lucidchart</span>
+              <span class="tag">Microsoft Project</span>
+              <span class="tag">Microsoft SharePoint</span>
+              <span class="tag">Power Automate</span>
             </div>
           </article>
         </li>
 
-        <!-- Job 2 -->
+        <!-- Job 2 — BSO -->
         <li class="timeline-item">
           <div class="timeline-dot" aria-hidden="true"></div>
           <article class="timeline-card">
             <div class="timeline-meta">
-              <div>
-                <h3 class="timeline-role">[Mid-Level Role Title]</h3>
-                <span class="timeline-company">@ [Company Name B]</span>
+              <div class="timeline-company-row">
+                <img
+                  src="public/bso_logo.jpeg"
+                  alt="Business Services Organisation logo"
+                  class="timeline-logo"
+                  loading="lazy"
+                />
+                <div>
+                  <h3 class="timeline-role">Data Analyst <span style="font-weight:500;color:var(--text-muted)">(Band 6)</span></h3>
+                  <span class="timeline-company">@ Business Services Organisation (BSO) · Full-time</span>
+                </div>
               </div>
-              <time class="timeline-period">[Mon YYYY] — [Mon YYYY]</time>
+              <time class="timeline-period">Sep 2024 — Aug 2025 · 1 yr</time>
             </div>
-            <ul class="timeline-bullets" role="list">
-              <li>[Key achievement — tools built, systems improved, scale handled.]</li>
-              <li>[Team impact or cross-functional project you led or contributed to.]</li>
-              <li>[Anything else worth highlighting from this role.]</li>
-            </ul>
             <div class="tag-row">
-              <span class="tag">[Tech A]</span>
-              <span class="tag">[Tech B]</span>
-              <span class="tag">[Tech C]</span>
+              <span class="tag">SQL Server</span>
+              <span class="tag">Power BI</span>
+              <span class="tag">Power Automate</span>
+              <span class="tag">Business Workflows</span>
             </div>
           </article>
         </li>
 
-        <!-- Job 3 -->
+        <!-- Job 3 — Lloyds Banking Group -->
         <li class="timeline-item">
           <div class="timeline-dot" aria-hidden="true"></div>
           <article class="timeline-card">
             <div class="timeline-meta">
-              <div>
-                <h3 class="timeline-role">[Junior / Entry-Level Role Title]</h3>
-                <span class="timeline-company">@ [Company Name C]</span>
+              <div class="timeline-company-row">
+                <img
+                  src="public/lloyds_banking_group_logo.jpeg"
+                  alt="Lloyds Banking Group logo"
+                  class="timeline-logo"
+                  loading="lazy"
+                />
+                <div>
+                  <h3 class="timeline-role">Consultant — Personal Banking</h3>
+                  <span class="timeline-company">@ Lloyds Banking Group · Full-time</span>
+                </div>
               </div>
-              <time class="timeline-period">[Mon YYYY] — [Mon YYYY]</time>
+              <time class="timeline-period">Apr 2024 — Sep 2024</time>
             </div>
-            <ul class="timeline-bullets" role="list">
-              <li>[Early-career contribution or notable learning.]</li>
-              <li>[What you shipped or contributed to the product or team.]</li>
-            </ul>
             <div class="tag-row">
-              <span class="tag">[Tech A]</span>
-              <span class="tag">[Tech B]</span>
+              <span class="tag">Financial Services</span>
+              <span class="tag">Customer Consulting</span>
+              <span class="tag">Personal Banking</span>
+            </div>
+          </article>
+        </li>
+
+        <!-- Job 4 — Finlatics -->
+        <li class="timeline-item">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <article class="timeline-card">
+            <div class="timeline-meta">
+              <div class="timeline-company-row">
+                <img
+                  src="public/fincrux_enabling_insights_logo.jpeg"
+                  alt="Finlatics logo"
+                  class="timeline-logo"
+                  loading="lazy"
+                />
+                <div>
+                  <h3 class="timeline-role">Data Science Intern</h3>
+                  <span class="timeline-company">@ Finlatics · Internship</span>
+                </div>
+              </div>
+              <time class="timeline-period">Feb 2024 — Apr 2024</time>
+            </div>
+            <div class="tag-row">
+              <span class="tag">Python</span>
+              <span class="tag">Machine Learning</span>
+              <span class="tag">Statistics</span>
+              <span class="tag">EDA</span>
+              <span class="tag">Excel</span>
+            </div>
+          </article>
+        </li>
+
+        <!-- Job 5 — Specifi IO -->
+        <li class="timeline-item">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <article class="timeline-card">
+            <div class="timeline-meta">
+              <div class="timeline-company-row">
+                <img
+                  src="public/specifi_logo.jpeg"
+                  alt="Specifi IO logo"
+                  class="timeline-logo"
+                  loading="lazy"
+                />
+                <div>
+                  <h3 class="timeline-role">Product Data Manager</h3>
+                  <span class="timeline-company">@ Specifi IO · Full-time</span>
+                </div>
+              </div>
+              <time class="timeline-period">Nov 2023 — Feb 2024</time>
+            </div>
+            <div class="tag-row">
+              <span class="tag">Product Data</span>
+              <span class="tag">Data Management</span>
             </div>
           </article>
         </li>
@@ -200,54 +276,103 @@
   </section>
 
   <!-- ============================================================
+       EDUCATION
+  ============================================================ -->
+  <section id="education" class="education">
+    <div class="container">
+      <header class="section-header reveal">
+        <span class="section-label">03 / Education</span>
+        <h2 class="section-title">Academic Background</h2>
+      </header>
+
+      <div class="education-grid">
+        <article class="education-card reveal">
+          <div class="education-head">
+            <img
+              src="public/queens_university_belfast_logo.jpeg"
+              alt="Queen's University Belfast logo"
+              class="education-logo"
+              loading="lazy"
+            />
+            <h3 class="education-school">Queen's University Belfast</h3>
+          </div>
+          <p class="education-degree">MSc Business Analytics</p>
+          <p class="education-meta">Sep 2022 — Sep 2023</p>
+          <p class="education-grade">Grade: 2:1</p>
+        </article>
+
+        <article class="education-card reveal">
+          <div class="education-head">
+            <img
+              src="public/dr_b_r_ambedkar_national_institute_of_technology_jalandhar_official_logo.jpeg"
+              alt="Dr B R Ambedkar National Institute of Technology, Jalandhar logo"
+              class="education-logo"
+              loading="lazy"
+            />
+            <h3 class="education-school">Dr B R Ambedkar National Institute of Technology, Jalandhar</h3>
+          </div>
+          <p class="education-degree">B.Tech Bio Technology</p>
+          <p class="education-meta">2013 — 2017</p>
+          <p class="education-grade">Grade: 7.72</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
        SKILLS
   ============================================================ -->
   <section id="skills" class="skills">
     <div class="container">
       <header class="section-header reveal">
-        <span class="section-label">03 / Skills</span>
+        <span class="section-label">04 / Skills</span>
         <h2 class="section-title">What I Work With</h2>
       </header>
 
       <div class="skills-grid">
 
         <div class="skill-card reveal">
-          <h3 class="skill-category">Languages</h3>
+          <h3 class="skill-category">Data &amp; Programming</h3>
           <div class="skill-tags">
-            <span class="skill-tag">[Language A]</span>
-            <span class="skill-tag">[Language B]</span>
-            <span class="skill-tag">[Language C]</span>
-            <span class="skill-tag">[Language D]</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">Statistics</span>
+            <span class="skill-tag">Machine Learning</span>
+            <span class="skill-tag">Exploratory Data Analysis</span>
           </div>
         </div>
 
         <div class="skill-card reveal">
-          <h3 class="skill-category">Frameworks &amp; Libraries</h3>
+          <h3 class="skill-category">Analytics &amp; BI</h3>
           <div class="skill-tags">
-            <span class="skill-tag">[Framework A]</span>
-            <span class="skill-tag">[Framework B]</span>
-            <span class="skill-tag">[Library A]</span>
-            <span class="skill-tag">[Library B]</span>
+            <span class="skill-tag">Power BI</span>
+            <span class="skill-tag">Tableau</span>
+            <span class="skill-tag">SQL Server</span>
+            <span class="skill-tag">Dashboard Development</span>
+            <span class="skill-tag">Data Interpretation</span>
           </div>
         </div>
 
         <div class="skill-card reveal">
-          <h3 class="skill-category">Tools &amp; Platforms</h3>
+          <h3 class="skill-category">Tools &amp; Automation</h3>
           <div class="skill-tags">
-            <span class="skill-tag">[Tool A]</span>
-            <span class="skill-tag">[Tool B]</span>
-            <span class="skill-tag">[Platform A]</span>
-            <span class="skill-tag">[Platform B]</span>
+            <span class="skill-tag">Microsoft Power Automate</span>
+            <span class="skill-tag">Microsoft SharePoint</span>
+            <span class="skill-tag">Lucidchart</span>
+            <span class="skill-tag">Microsoft Project</span>
+            <span class="skill-tag">Microsoft Excel</span>
           </div>
         </div>
 
         <div class="skill-card reveal">
-          <h3 class="skill-category">Concepts</h3>
+          <h3 class="skill-category">Domain &amp; Business</h3>
           <div class="skill-tags">
-            <span class="skill-tag">[Concept A]</span>
-            <span class="skill-tag">[Concept B]</span>
-            <span class="skill-tag">[Concept C]</span>
-            <span class="skill-tag">[Concept D]</span>
+            <span class="skill-tag">Business Analysis</span>
+            <span class="skill-tag">Business Workflows</span>
+            <span class="skill-tag">Healthcare Analytics</span>
+            <span class="skill-tag">Personal Banking</span>
+            <span class="skill-tag">Product Data Management</span>
+            <span class="skill-tag">Stakeholder Collaboration</span>
           </div>
         </div>
 
@@ -261,32 +386,19 @@
   <section id="contact" class="contact">
     <div class="container">
       <header class="section-header reveal">
-        <span class="section-label">04 / Contact</span>
+        <span class="section-label">05 / Contact</span>
         <h2 class="section-title">Get In Touch</h2>
       </header>
 
       <div class="contact-body">
         <p class="contact-intro reveal">
-          [A warm, inviting message — whether you're open to new roles, freelance work,
-          collaboration, or just a good conversation about engineering. Keep it friendly.]
+          Let’s connect, share ideas, and build incredible things together.
         </p>
-
-        <a href="mailto:[your@email.com]" class="contact-email reveal">
-          [your@email.com]
-        </a>
 
         <div class="contact-links reveal">
 
-          <!-- GitHub -->
-          <a href="https://github.com/[yourusername]" class="contact-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true">
-              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
-            </svg>
-            GitHub
-          </a>
-
           <!-- LinkedIn -->
-          <a href="https://linkedin.com/in/[yourusername]" class="contact-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+          <a href="https://www.linkedin.com/in/aditipanwar10/" class="contact-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true">
               <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
             </svg>
@@ -294,7 +406,7 @@
           </a>
 
           <!-- Email -->
-          <a href="mailto:[your@email.com]" class="contact-link" aria-label="Send email">
+          <a href="#" class="contact-link" data-email-link aria-label="Send email">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true">
               <rect x="2" y="4" width="20" height="16" rx="2"/>
               <polyline points="22,6 12,13 2,6"/>
@@ -312,8 +424,8 @@
   ============================================================ -->
   <footer class="footer">
     <div class="container">
-      <p>Designed &amp; built by <span>[Your Name]</span></p>
-      <p class="footer-sub">© <span id="year"></span>. All rights reserved.</p>
+      <p>Designed &amp; built by <span>Aditi Panwar</span> with the help of AI</p>
+      <p class="footer-sub">© <span id="year"></span>. All rights reserved. &nbsp;·&nbsp; <a href="ai_disclaimer.html" class="footer-disclaimer-link">AI Disclaimer</a></p>
     </div>
   </footer>
 
