@@ -454,23 +454,6 @@ section { padding: var(--section-py) 0; }
   pointer-events: auto;
 }
 
-.avatar-photo-wrap::after {
-  content: 'Aditi Panwar';
-  position: absolute;
-  right: 8px;
-  bottom: 10px;
-  font-size: 0.56rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: rgba(255, 255, 255, 0.82);
-  background: rgba(15, 42, 29, 0.45);
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  border-radius: 999px;
-  padding: 0.15rem 0.42rem;
-  pointer-events: none;
-}
-
 /* Scrape deterrents for protected media (not absolute security) */
 [data-protected-media],
 [data-protected-media] * {
@@ -917,6 +900,12 @@ section { padding: var(--section-py) 0; }
   color: var(--accent);
 }
 .footer-sub { font-size: 0.8125rem; }
+.footer-legal {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-top: 0.35rem;
+}
 
 /* ============================================================
    KEYFRAMES
